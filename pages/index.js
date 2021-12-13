@@ -436,7 +436,7 @@ export default function Home() {
 
       <WipsterIntegrationsImage />
 
-      <button type="button" className={`btn btn-success btn-lg mt-5 hoverButton`} onClick={()=> alert('page under development')}>SECURITY FEATURES</button>
+      <button type="button" className={`btn btn-success btn-lg mt-5 hoverButton`} onClick={()=> alert('page under development')}>ALL INTEGRATIONS</button>
 
 
       <div className="h1 mt-5 p-1 p-md-3">Create. Share. Collaborate. Iterate. Track. Approve.</div>
@@ -580,7 +580,7 @@ export default function Home() {
 <div className="h5 px-1 px-md-5 text-secondary mt-4">With plans ranging from completely free to full-service, Wipster is flexible to fit how you do business.</div>
 
 
-<button type="button" className={`btn btn-success btn-lg hoverButton my-5`} onClick={()=> alert('page under development')}>SECURITY FEATURES</button>
+<button type="button" className={`btn btn-success btn-lg hoverButton my-5`} onClick={()=> alert('page under development')}>PRICING PLANS</button>
 
 
 
