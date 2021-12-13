@@ -1,0 +1,27 @@
+.imageContainer{
+    width: 80%;
+    height: 200px;
+    position: relative;
+    margin: auto;
+}
+
+@media all and (max-width: 1000px){
+    .imageContainer{
+        height: 175px;
+    }
+}
+
+@media all and (max-width: 700px){
+    .imageContainer{
+        height: 150px;
+    }
+}
+
+@media all and (max-width: 450px){
+    .imageContainer{
+        height: 100px;
+    }
+}
+
+
+
