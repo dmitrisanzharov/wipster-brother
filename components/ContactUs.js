@@ -145,7 +145,7 @@ const ContactUs = () => {
 
       <div className="col-2">
 <select className="form-select" id="areaCodes" name='areaCode'>
-  <option selected>Choose area code...</option>
+  <option defaultValue>Area code</option>
   <option value="+353">+353</option>
   <option value="+1">+1</option>
   <option value="+34">+34</option>

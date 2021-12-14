@@ -150,9 +150,8 @@ export const AppProvider = ({children}) => {
 
     const handleContactUsRedirect = () => {
         setTimeout(()=> {
-   
-            let homeURL = window.location.origin;
-            window.location.href = `${homeURL}/`;
+  
+            window.location.href = `${originURL}/`;
        
         }, 2000)
     }
