@@ -244,7 +244,8 @@ useEffect(()=> {
             noEmailInRegistration,
             noPasswordInRegistration,
             showThankYouForRegisteringModal,
-            handleContactUsRedirect
+            handleContactUsRedirect,
+            origin
 
         }}>
             {children}

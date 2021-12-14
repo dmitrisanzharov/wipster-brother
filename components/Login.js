@@ -13,7 +13,7 @@ const Login = () => {
 
 const getFullUserData = async () => {
  
-        const res = await fetch(`http://localhost:3000/api/fulluserdata`);
+        const res = await fetch(`${origin}/api/fulluserdata`);
         const fulluserdata = await res.json();
         setFullUserData(fulluserdata); 
 
