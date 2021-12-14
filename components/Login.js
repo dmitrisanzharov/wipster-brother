@@ -6,7 +6,7 @@ import Meta from './Meta'
 
 const Login = () => {
 
-    const {userLogin, setUserLogin, handleSubmit, userNotFound, wrongPassword} = useGlobal();
+    const {userLogin, setUserLogin, handleSubmit, userNotFound, wrongPassword, origin} = useGlobal();
     const {email, password, emailInputBlank, passwordInputBlank} = userLogin; 
 
     const [fullUserData, setFullUserData] = useState([]); 
