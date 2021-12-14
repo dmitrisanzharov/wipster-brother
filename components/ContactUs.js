@@ -20,6 +20,8 @@ const ContactUs = () => {
     const {handleContactUsRedirect} = useGlobal();
   
     const [state, handleSubmit] = useForm("xyyoyeql");
+
+    console.log('the contactUS phone page should have Area Code, as oppose to Choose Area Code')
   
     if (state.succeeded) {
   
