@@ -40,6 +40,7 @@ export const AppProvider = ({children}) => {
     const [noEmailInRegistration, setNoEmailInRegistration] = useState(false); 
     const [noPasswordInRegistration, setNoPasswordInRegistration] = useState(false); 
     const [showThankYouForRegisteringModal, setShowThankYouForRegisteringModal] = useState(false);
+    const [originURL, setOriginURL] = useState(''); 
  
     
 
@@ -76,8 +77,7 @@ export const AppProvider = ({children}) => {
             } else {
 
             localStorage.setItem('userSession', JSON.stringify(userFound[0]));
-                const mainURL = window.location.origin; 
-                window.location.href = `${mainURL}/usersession`
+                  window.location.href = `${origin}/usersession`
             }
             
         } else {
@@ -141,7 +141,7 @@ export const AppProvider = ({children}) => {
    
         }, 3000)
 
-        await axios.post('http://localhost:3000/api/newuser', {...newUser});
+        await axios.post(`${origin}/api/newuser`, {...newUser});
         
 
         // end of handleNewUserSubmit
@@ -162,6 +162,12 @@ export const AppProvider = ({children}) => {
 //********************************************************************
 //          useEffects
 // *******************************************************************
+
+useEffect(()=> {
+    let homeURL = window.location.origin;
+    setOriginURL(homeURL); 
+}, [])
+
 
 useEffect(()=> {
     setUserLogin({...userLogin, emailInputBlank: false});
