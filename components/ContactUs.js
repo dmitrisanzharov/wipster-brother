@@ -23,6 +23,7 @@ const ContactUs = () => {
 
     console.log('the contactUS phone page should have Area Code, as oppose to Choose Area Code');
     console.log('email should be Your Email now');
+    console.log('phone should be Your Phone now');
   
     if (state.succeeded) {
   
@@ -142,7 +143,7 @@ const ContactUs = () => {
 
  <div className="mb-3">
 
-<label htmlFor="contactUsPhone" className="form-label">Phone</label>
+<label htmlFor="contactUsPhone" className="form-label">Your Phone</label>
 
 <div className="row g-0">
 
