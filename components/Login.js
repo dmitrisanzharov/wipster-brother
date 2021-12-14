@@ -6,14 +6,14 @@ import Meta from './Meta'
 
 const Login = () => {
 
-    const {userLogin, setUserLogin, handleSubmit, userNotFound, wrongPassword, origin} = useGlobal();
+    const {userLogin, setUserLogin, handleSubmit, userNotFound, wrongPassword, originURL} = useGlobal();
     const {email, password, emailInputBlank, passwordInputBlank} = userLogin; 
 
     const [fullUserData, setFullUserData] = useState([]); 
 
 const getFullUserData = async () => {
  
-        const res = await fetch(`${origin}/api/fulluserdata`);
+        const res = await fetch(`${originURL}/api/fulluserdata`);
         const fulluserdata = await res.json();
         setFullUserData(fulluserdata); 
 

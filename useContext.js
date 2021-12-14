@@ -141,7 +141,7 @@ export const AppProvider = ({children}) => {
    
         }, 3000)
 
-        await axios.post(`${origin}/api/newuser`, {...newUser});
+        await axios.post(`${originURL}/api/newuser`, {...newUser});
         
 
         // end of handleNewUserSubmit
@@ -245,7 +245,7 @@ useEffect(()=> {
             noPasswordInRegistration,
             showThankYouForRegisteringModal,
             handleContactUsRedirect,
-            origin
+            originURL
 
         }}>
             {children}
