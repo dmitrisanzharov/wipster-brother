@@ -21,7 +21,8 @@ const ContactUs = () => {
   
     const [state, handleSubmit] = useForm("xyyoyeql");
 
-    console.log('the contactUS phone page should have Area Code, as oppose to Choose Area Code')
+    console.log('the contactUS phone page should have Area Code, as oppose to Choose Area Code');
+    console.log('email should be Your Email now');
   
     if (state.succeeded) {
   
@@ -128,7 +129,7 @@ const ContactUs = () => {
 
 
     <div className="mb-3">
-    <label htmlFor="ContactUsEmail" className="form-label">Email</label>
+    <label htmlFor="ContactUsEmail" className="form-label">Your Email</label>
     <input type="email" className="form-control" id="ContactUsEmail" placeholder="abc@mail.com" name='email' />
     <ValidationError 
         prefix="Email" 
