@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image';
 import { useForm, ValidationError } from '@formspree/react';
 import {useGlobal} from '../useContext';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 // COMPONENTS
@@ -21,10 +22,16 @@ const ContactUs = () => {
   
     const [state, handleSubmit] = useForm("xyyoyeql");
 
-    console.log('the contactUS phone page should have Area Code, as oppose to Choose Area Code');
-    console.log('email should be Your Email now');
-    console.log('phone should be Your Phone now');
+    const [captchaDone, setCaptchaDone] = useState(false);
+
+    const handleChange = (token) => {
+      console.log(token);
+      setCaptchaDone(true);
+    }
   
+
+
+ 
     if (state.succeeded) {
   
         handleContactUsRedirect();
@@ -207,6 +214,15 @@ const ContactUs = () => {
       />
 </div>
 
+<div className='my-3 py-1'>
+<ReCAPTCHA
+        sitekey="6LfwO60dAAAAAF_eRoxjcujIG_sXZJxCAzJHMTMc"
+        onChange={handleChange}
+      />
+</div>
+
+
+
 <p className="text-dark">
 Wipster uses the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our 
 <span className='text-primary' style={{cursor: 'pointer'}} onClick={()=> alert('page under development')}> Privacy Policy.</span>
@@ -214,9 +230,14 @@ Wipster uses the contact information you provide to us to contact you about our 
 </p>
 
 
-      <button type="submit" disabled={state.submitting} className="btn btn-success btn-lg mb-5">
+
+
+
+    {captchaDone ? <button type="submit" disabled={state.submitting} className="btn btn-success btn-lg mb-5">
         SUBMIT
-      </button>
+      </button> : <button type="button" className="btn btn-success btn-lg mb-5" onClick={()=> alert('please do Captcha Validation First')}>
+        SUBMIT
+      </button> }  
 
 
         {/* end of form */}
