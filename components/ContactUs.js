@@ -24,6 +24,9 @@ const ContactUs = () => {
 
     const [captchaDone, setCaptchaDone] = useState(false);
 
+
+    console.log('THIS IS BRANCH NAME JURASSIC'); 
+
     const handleChange = (token) => {
       console.log(token);
       setCaptchaDone(true);
